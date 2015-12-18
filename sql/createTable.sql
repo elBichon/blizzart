@@ -1,7 +1,8 @@
 drop table if exists ecoles;
 create table ecoles (
                        id integer not null primary key auto_increment,
-                       nom varchar(40) not null,
+                       nom varchar(50) not null,
+                       nomUrl integer not null,
                        url text not null
                        ) engine=innodb character set utf8 collate utf8_unicode_ci;
 
@@ -27,7 +28,7 @@ create table entreprises (
 drop table if exists images;
 create table images (
                     id integer not null primary key auto_increment,
-                    nomEcole varchar(40) not null,
+                    nomEcole integer,
                     nom varchar(40) not null
                     ) engine=innodb character set utf8 collate utf8_unicode_ci;
 
