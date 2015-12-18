@@ -1,3 +1,6 @@
+<!--au moment de l'insertion d'une image dans la base de données, toujours penser à mettre le chemin absolu-->
+
+
 <!DOCTYPE html>
 <html>
   <head lang="fr">
@@ -14,6 +17,7 @@
     <script src="JS/functions.js"></script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <?php  include("includes/connect.php"); ?>
     <?php  include("includes/menu.php"); ?>
 
        <!--Accueil-->
@@ -33,17 +37,18 @@
 	  <div id="c1121" class="col-sm-12 col-xs-12">
 	    <h2>le Festival </h2>
 	    <h4>festival artistique inter-écoles</h4>
+            <?php  include("includes/includesFestival.php"); ?>
 	  </div>
 	</div>
 	</section>
 
     <!--Programme-->
-    <span class="anchor" id="section3"></span>
+    <span class="anchor" id="section3"></span><!--pensez à rajouter script pour que tant que la date du festival est pas arrivée, ne pas mettre en mode visible-->
     <div id="s1" class="slide">
     <div id="r112" class="row">
-        <div id="c1121" class="col-sm-12 col-xs-12">
             <h2>Au programme </h2>
             <h4>festival artistique inter-écoles</h4>
+                <?php  include("includes/includesProgramme.php"); ?>
         </div>
     </div>
     </div>
@@ -56,9 +61,11 @@
 	<div id="r311" class="row">
 	  <h2>Festival Entreprise</h2>
 	  <h4>Vous êtes une entreprise et vous souhaitez aussi faire partie de l’aventure ? Nous avons pensé à vous !</h4>
+                <?php  include("includes/includesEntreprise.php"); ?>
 	  	</div>
       </div>
     </div>
+
         <!--L'équipe-->
     <span class="anchor" id="section5"></span>
 <div id="s5" class="slide">
@@ -68,15 +75,15 @@
         <div class="barre">&nbsp</div>
             <div id="r113" class="row"></div>
             <div id="r114" class="row">
-                <div id="c1141" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso1" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
-                <div id="c1142" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso2" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
-                <div id="c1143" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso3" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
-                <div id="c1144" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso4" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
-                <div id="c1144" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso4" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
-                <div id="c1144" class="col-sm-2 col-xs-2"><a href="#mailsponsor" class="scrollTo"><img id="sponso4" class="img-responsive" src="img/logo.jpg" alt="Logo sponsor"></a></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
+                <div id="c1141" class="col-sm-2 col-xs-2"><img id="sponso1" class="img-responsive" src="img/ecole/logo.jpg" alt="Logo sponsor"></div>
             </div>
             <div id="r115" class="row">
-                <div id="c1151" class="col-sm-2 col-xs-2"><h4>Votre marque ici</h4></div>
+                <div id="c1151" class="col-sm-2 col-xs-2"><h4><?php  include("includes/nomEquipe.php"); ?></h4></div>
                 <div id="c1152" class="col-sm-2 col-xs-2"><h4>Votre marque ici</h4></div>
                 <div id="c1153" class="col-sm-2 col-xs-2"><h4>Votre marque ici</h4></div>
                 <div id="c1154" class="col-sm-2 col-xs-2"><h4>Votre marque ici</h4></div>
