@@ -19,7 +19,8 @@ create table event (
 drop table if exists entreprises;
 create table entreprises (
                        id integer not null primary key auto_increment,
-                       textEntreprise text not null
+                       textEntreprise text not null,
+                       EntrepriseP2 text not null
                        ) engine=innodb character set utf8 collate utf8_unicode_ci;
 
 
